@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { LoginPage } from './Config/routes';
 import * as serviceWorker from './serviceWorker';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 ReactDOM.render(<LoginPage />, document.getElementById('root'));
 
