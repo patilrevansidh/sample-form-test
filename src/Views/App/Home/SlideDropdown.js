@@ -12,7 +12,7 @@ const { Option } = Select;
 export const SlideDropdown = ({ onPositionChange, slidePosition, slideCount, onSlideSelection }) => {
   const optionalProps = slideCount && { value: slideCount } || {}
   return <Row gutter={24}>
-    <Col md={12} xs={24}>
+    <Col md={12} xs={24} key={`${slideCount}selcted`}>
       <Select {...optionalProps} placeholder={INPUT_PLACEHOLDER.SLIDE_DROP_DOWN} onChange={onSlideSelection}>
         {
           DROPDOWN_DATA.map(item => {
