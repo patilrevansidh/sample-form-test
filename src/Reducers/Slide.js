@@ -25,7 +25,7 @@ export const slideReducer = (state = initialState, action) => {
       return { ...state, currentCount: action.slideCount, viewedSlides: [...state.viewedSlides, action.slideCount] };
 
     case TOGGLE_MODAL:
-      const stateValue = state.showSummary && initialState || { showSummary: !state.showSummary }
+      const stateValue = state.showSummary && { ...initialState, isLoggedIn: true} || { showSummary: !state.showSummary }
       return { ...state, ...stateValue };
 
     default:

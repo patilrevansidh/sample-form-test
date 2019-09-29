@@ -16,7 +16,7 @@ class SlideList extends React.Component {
   handleFinish = () => this.props.toggleModal();
 
   render() {
-    if (false) {
+    if (!this.props.isLoggedIn) {
       return <Redirect to='/login' />
     }
     const { slidePosition, currentCount } = this.props;
