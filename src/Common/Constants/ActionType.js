@@ -1,0 +1,3 @@
+export const SET_PROFILE = 'SET_PROFILE';
+export const SET_SLIDE_VIEW = 'SET_SLIDE_VIEW';
+export const SET_SLIDE_POSITION = 'SET_SLIDE_POSITION';

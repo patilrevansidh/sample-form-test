@@ -17,5 +17,13 @@ export const INPUT_LABEL = {
 
 export const VALIDATION_ERROR = {
   USER_NAME: 'Please input your user name!',
-  PASSWORD: 'Please input your password!'
+  PASSWORD: 'Please input your password!',
+  SLIDE: 'Please Select Slide Count!'
+}
+
+export const SLIDE_POSITION = {
+  TOP: 'top',
+  BOTTOM: 'bottom',
+  LEFT: 'left',
+  RIGHT: 'right'
 }

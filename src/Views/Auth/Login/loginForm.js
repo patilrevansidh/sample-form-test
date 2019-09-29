@@ -11,10 +11,11 @@ class Login extends React.Component {
    *   
    */
   handleLogin = async (payload) => {
+    
     try {
       this.setFormValues('loading', true)
       await login(payload)
-      this.setFormValues('loading', false);
+      this.setFormValues('loading', false);     
       this.props.onLogin();
     } catch (error) {
       this.setFormValues('loading', false);
@@ -39,8 +40,7 @@ class Login extends React.Component {
   render() {
     const { getFieldDecorator, getFieldValue } = this.props.form;
     const loading = getFieldValue('loading');
-    const serverError = getFieldValue('error');
-    console.log('serverError', serverError)
+    const serverError = getFieldValue('error')
     return (
       <div className='login-container'>
         <div className='form-container'>
