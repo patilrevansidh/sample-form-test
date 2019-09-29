@@ -1,3 +1,4 @@
 export const SET_PROFILE = 'SET_PROFILE';
-export const SET_SLIDE_VIEW = 'SET_SLIDE_VIEW';
+export const SET_SLIDE_COUNT = 'SET_SLIDE_COUNT';
 export const SET_SLIDE_POSITION = 'SET_SLIDE_POSITION';
+export const TOGGLE_MODAL = 'TOGGLE_MODAL';

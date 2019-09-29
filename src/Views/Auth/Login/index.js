@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { LoginForm } from './loginForm';
-import './login.scss';
+import React from 'react';
 import { connect } from 'react-redux';
 import { setProfileStatus } from '../../../Actions/Slide';
+import './login.scss';
+import { LoginForm } from './loginForm';
 
 const Login = (props) => {
   const handleLoginSuccess = () => {

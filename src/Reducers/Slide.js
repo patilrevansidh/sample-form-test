@@ -1,5 +1,5 @@
 import {
-  SET_PROFILE, SET_SLIDE_POSITION, SET_SLIDE_VIEW
+  SET_PROFILE, SET_SLIDE_POSITION, SET_SLIDE_COUNT, TOGGLE_MODAL
 } from '../Common/Constants/ActionType';
 import {
   SLIDE_POSITION
@@ -10,6 +10,7 @@ const initialState = {
   slidePosition: SLIDE_POSITION.TOP,
   currentCount: null,
   viewedSlides: [],
+  showSummary: false
 }
 
 export const slideReducer = (state = initialState, action) => {
@@ -18,11 +19,15 @@ export const slideReducer = (state = initialState, action) => {
       return { ...state, isLoggedIn: true };
 
     case SET_SLIDE_POSITION:
-      return { ...state, slidePosition: action.payload };
+      return { ...state, slidePosition: action.slidePosition };
 
-    case SET_SLIDE_VIEW:
+    case SET_SLIDE_COUNT:
       return { ...state, currentCount: action.slideCount, viewedSlides: [...state.viewedSlides, action.slideCount] };
-      
+
+    case TOGGLE_MODAL:
+      const stateValue = state.showSummary && initialState || { showSummary: !state.showSummary }
+      return { ...state, ...stateValue };
+
     default:
       return state;
   }
