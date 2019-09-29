@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { LoginForm } from './loginForm';
 import './login.scss'
 export class LoginPage extends Component {
-  handleSubmit = () =>{
-    
-  }
+  
+  handleLoginSuccess = () => this.props.history.push('/');
+  
   render() {
     return (
-      <LoginForm onSubmit={this.handleSubmit}/>
+      <LoginForm onLogin={this.handleLoginSuccess}/>
     );
   }
 }

@@ -11,6 +11,11 @@ export const INPUT_PLACEHOLDER = {
 }
 
 export const INPUT_LABEL = {
-  USER_NAME:'User Name',
+  USER_NAME: 'User Name',
   PASSWORD: 'Password'
+}
+
+export const VALIDATION_ERROR = {
+  USER_NAME: 'Please input your user name!',
+  PASSWORD: 'Please input your password!'
 }
