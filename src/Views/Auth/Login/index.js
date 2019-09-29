@@ -1,12 +1,13 @@
-import React from 'react';
-import {  Button } from 'antd';
-export class LoginPage extends React.Component {
+import React, { Component } from 'react';
+import { LoginForm } from './loginForm';
+import './login.scss'
+export class LoginPage extends Component {
+  handleSubmit = () =>{
+    
+  }
   render() {
     return (
-      <div>
-        Login Page
-        <Button type="primary">Primary</Button>
-      </div>
+      <LoginForm onSubmit={this.handleSubmit}/>
     );
   }
 }
